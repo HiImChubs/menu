@@ -1,0 +1,419 @@
+/* Color Palette
+  White: #ffffff;
+  Black: #000000;
+  Medium Gray: #999999;
+  Light Gray: #dddddd;
+  Light blue: #99ffff;
+*/
+
+
+/*********** Begin Layout Styles ***********/
+body {
+  background-image: url("../img/wood.jpg");
+  font-family: 'Contrail One', cursive;
+  background-attachment: fixed;
+}
+
+div.container {
+  background-color: #ededed;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; /* disable this line if you want full-width layouts */
+}
+
+header, main, footer {
+  padding: 10px;
+  margin: 8px;
+}
+
+/* phones (base layout is mobile-first) */
+header {
+  /*border: 3px solid #990000;  disable this line once layout works */
+  display: grid;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "logo";
+}
+
+main {
+   /* border: 3px solid #009900; disable this line once layout works */
+  display: grid;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "menu"
+    "hours"
+    "location";
+}
+
+footer {
+  /* border: 3px solid #000099;  disable this line once layout works */
+  display: grid;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "socialmedia"
+    "contact";
+}
+
+/* tablets and small laptops */
+@media (min-width: 600px) {
+
+  header {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo logo";
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "carousel carousel"
+      "menu location"
+      "hours hours"
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "contact contact"
+    "socialmedia credit";
+  }
+}
+
+/* desktops */
+@media (min-width: 900px) {
+  header {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo logo";
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "carousel carousel carousel"
+      "menu hours location"
+      "menu hours location"
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "socialmedia contact credit";
+  }
+}
+
+div {
+/*   border: 1px solid #999999; disable this line once layout works */
+/*  text-align: center;   disable this line once layout works */
+}
+
+main div {
+  /*  min-height: 80px; /* disable this line once layout works */
+}
+
+div#appetizers{
+  border: 1px solid #000000;
+  padding: 10px;
+}
+
+div#desserts{
+  border: 1px solid #000000;
+  padding: 10px;
+  margin-left: 10px
+}
+
+div#entrees{
+  border: 1px solid #000000;
+  padding: 10px;
+  margin-left: 10px;
+}
+div#logo {
+  grid-area: logo;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+div#carousel {
+  grid-area: carousel;
+  background-color: #ededed;
+  text-align: center;
+}
+
+div#menu {
+  grid-area: menu;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+div#hours {
+  grid-area: hours;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+div#location {
+  grid-area: location;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+div#socialmedia {
+  grid-area: socialmedia;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+div#contact {
+  grid-area: contact;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+div#credit {
+  grid-area: credit;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+@media (max-width: 599px) {
+  div#carousel {
+    display: none;
+  }
+
+  div#credit {
+    display: none;
+  }
+}
+
+
+/*********** End Layout Styles ***********/
+
+
+/*********** Begin Content Styles ***********/
+
+/* Headings */
+h1 {
+
+}
+
+h2 {
+  font-family: 'Righteous', cursive;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+/* Paragraphs and lists */
+
+p {
+margin-left: auto;
+}
+
+ol {
+
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* tables */
+
+table {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+caption {
+
+}
+
+tr {
+  border: 1px solid black;
+}
+
+th {
+  border: 1px solid black
+}
+
+td {
+
+}
+
+/* images */
+img {
+
+}
+
+iframe{
+  max-width: 100%
+}
+/* links */
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+
+/* forms */
+
+
+
+/*********** End Content Styles ***********/
